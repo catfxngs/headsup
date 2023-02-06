@@ -1,7 +1,9 @@
 # Heads Up!
 Up-to-date watch, warning, and advisory messages for a selected location using the [National Weather Service API](https://www.weather.gov/documentation/services-web-api).
 
-*Very much still a work in progress, sorry for messy code!*
+## THIS IS MY PERSONAL DEVELOPMENT BRANCH!
+
+Finalized contributions are pushed to the [main](https://github.com/catfxngs/headsup/tree/main) branch.
 
 ## Current Features
 
