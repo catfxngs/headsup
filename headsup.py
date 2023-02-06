@@ -45,6 +45,7 @@ def get_sleep():
     sleeptime = int(sg.popup_get_text('How many seconds would you like to wait between checks?', 'Heads Up! - Check Frequency', default_text='60'))
     return sleeptime
 
+# communicates your location input with api
 lat = get_lat()
 lon = get_lon()
 sleeptime = get_sleep()
@@ -64,10 +65,12 @@ print(num_alerts)
 print(parse_json['title'])
 
 # GUI
-frame_layout = [[sg.Text("You have " + str(num_alerts) + " alerts in your area.", key='alertcount')],
-            [sg.Text("Alerts:")],
-            [sg.Listbox(values=alertheadlines, size=(60, 20), key='Alerts:', enable_events=True)],
-            [sg.Button('New'), sg.Button('Exit')]]
+frame_layout = [
+    [sg.Text("You have " + str(num_alerts) + " alerts in your area.", key='alertcount')],
+    [sg.Text("Alerts:")],
+    [sg.Listbox(values=alertheadlines, size=(60, 20), key='Alerts:', enable_events=True)],
+    [sg.Button('New'), sg.Button('Exit')]
+]
 layout = [[sg.Frame('Heads Up!', frame_layout, font='Any 18', title_color='red')]]
 window = sg.Window('Heads Up! for ' + lat + "," + lon, layout)
 cooltime = time.time()
